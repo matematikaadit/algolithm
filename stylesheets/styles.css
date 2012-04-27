@@ -995,6 +995,7 @@ footer {
     color: #444;
   }
 }
+/*
 @media print, screen and (max-height: 680px) {
   footer {
     text-align: center;
@@ -1005,6 +1006,7 @@ footer {
     width: auto;
   }
 }
+*/
 @media print, screen and (max-height: 480px) {
   nav {
     display: none;
@@ -1025,30 +1027,40 @@ footer {
    ========================================================================== */
 
 #main {
-    width: 800px;
-    height: 600px;
-    margin: auto auto;
-    /* border: 1px solid black; */
+  width: 590px;
+  height: 400px;
+  margin: auto auto;
+  margin-bottom: 20px;
+  /* border: 1px solid black; */
 }
 
 
 #main svg {
-    border: 1px solid steelblue;
+  background-color: #FC0;
+  border: 1px solid #F0B500;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
     /* background-color: gray; */
 }
 
 circle.node {
-    fill: steelblue;
+  fill: steelblue;
+  stroke: white;
+  stroke-width: 2px;
 }
 
 text.node {
-    font-face: sans-serif;
-    font-size: 14px;
-    fill: white;
-    text-anchor: middle;
+  font-face: 'Quattrocento Sans';
+  font-size: 12px;
+  fill: white;
+  text-anchor: middle;
 }
 
 line.edge {
   stroke: steelblue;
-  stroke-width: 3px;
+  stroke-width: 2px;
 }
