@@ -371,6 +371,13 @@ $ ->
     for node in nodes
       color node, color_normal
 
+  # reset the area
+  reset_area = ->
+    nodes = []
+    edges = []
+    node_draw()
+    edge_draw()
+
   $("#bfs").click (e) ->
     e.preventDefault()
     at = 0
@@ -390,3 +397,7 @@ $ ->
   $("#clear").click (e) ->
     e.preventDefault()
     clear_col()
+
+  $("#reset").click (e) ->
+    e.preventDefault()
+    reset_area()
