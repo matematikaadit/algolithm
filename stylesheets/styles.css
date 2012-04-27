@@ -1044,13 +1044,15 @@ footer {
   -ms-border-radius: 3px;
   -khtml-border-radius: 3px;
   border-radius: 3px;
-    /* background-color: gray; */
+  /* background-color: gray; */
+  /* cursor: pointer; */
 }
 
 circle.node {
   fill: steelblue;
   stroke: white;
   stroke-width: 2px;
+  cursor: pointer;
 }
 
 text.node {
@@ -1058,9 +1060,11 @@ text.node {
   font-size: 12px;
   fill: white;
   text-anchor: middle;
+  cursor: pointer;
 }
 
 line.edge {
   stroke: steelblue;
   stroke-width: 2px;
+  cursor: pointer;
 }
