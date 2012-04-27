@@ -1,7 +1,7 @@
 $ ->
 
-  width  = 800
-  height = 600
+  width  = 588
+  height = 398
   parent = "#main"
 
   # Drawing Area
@@ -47,10 +47,10 @@ $ ->
 
   # duration and circle radius
   dur = 250
-  r   = 20
+  r   = 15
 
   color_selected = "red"
-  color_normal   = "steelblue"
+  color_normal   = "#4276B6"
 
   # choose color based on waiting list in ew
   which_color = (d) ->

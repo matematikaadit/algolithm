@@ -1,15 +1,63 @@
+
 <!doctype html>
 <html>
-<head>
-<title>Graphari</title>
-<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="d3.v2.min.js"></script>
-<script type="text/javascript" src="coffee-script.js"></script>
-<script type="text/coffeescript" src="graphari.coffee"></script>
-<link rel="stylesheet" type="text/css" href="main.css">
-</head>
-<body>
-  <div id="main"></div>
-  <div id="run">Run BFS</div>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Algolithm &raquo; Algorithm Simulator</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
+    <script type="text/javascript" src="javascripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="javascripts/d3.v2.min.js"></script>
+    <script type="text/javascript" src="javascripts/coffee-script.js"></script>
+    <script type="text/coffeescript" src="javascripts/graphari.coffee"></script>
+
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    -->
+
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+    <header>
+    <h1>Algolithm</h1>
+    <p>Well, just draw the graph and run the algorithm.</p>
+    </header>
+
+    <div id="banner">
+      <span id="logo"></span>
+
+      <a href="https://github.com/matematikaadit/algolithm" class="button fork"><strong>Fork On GitHub</strong></a>
+      <div class="downloads">
+        <span>Algorithm:</span>
+        <ul>
+          <li><a href="#" id="run" class="button">BFS</a></li>
+          <li><a href="#" class="button">DFS</a></li>
+        </ul>
+      </div>
+    </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+      <ul></ul>
+      </nav>
+
+      <section>
+      <div id="main"></div>
+      </section>
+
+      <footer>
+      <p>Project maintained by <a href="https://github.com/matematikaadit">matematikaadit</a></p>
+      <p><span class="small">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
 </html>
