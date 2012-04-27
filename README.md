@@ -2,6 +2,10 @@
 
 Simulator for performing various algorithm on a graph.
 
+## Version
+
+This is `0.1.1` release version codename `Elsea`
+
 ## LICENSE
 
 The MIT License (MIT)
