@@ -252,6 +252,8 @@ $ ->
   #--------------------ALGO Time--------------------#
   #
   # let's save the princess
+  #
+  # bfs algorithm
   bfs = (nodes, source) ->
     for node in nodes
       color    node, color_unvisited
@@ -276,6 +278,35 @@ $ ->
           distance node, distance(p) + 1
           Q.push   node
 
+  # dfs stuff
+  time = 0
+  d = []
+  f = []
+
+  # dfs algorithm
+  dfs = (nodes) ->
+    for node in nodes
+      color node, color_unvisited
+      parent node, null
+
+    time = 0
+    for node in nodes
+      if color(node) is color_unvisited
+        dfs_visit(node)
+
+  dfs_visit = (node) ->
+    color node, color_visited
+    time++
+    d[node] = time
+
+    for v in neighbour(node)
+      if color(v) is color_unvisited
+        parent v, node
+        dfs_visit(v)
+
+    color node, color_finished
+    time++
+    f[node] = time
 
   # various color
   color_unvisited = "gray"
@@ -333,10 +364,16 @@ $ ->
         nbh.push(edge[0])
     return nbh
 
-  $("#run").click ->
+  $("#bfs").click ->
     at = 0
     tmp = dur
     dur = 1000
     bfs(nodes, nodes[0])
     dur = tmp
 
+  $("#dfs").click ->
+    at = 0
+    tmp = dur
+    dur = 1000
+    dfs(nodes)
+    dur = tmp
