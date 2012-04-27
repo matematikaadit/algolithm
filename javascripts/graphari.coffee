@@ -327,6 +327,8 @@ $ ->
       when color_visited, color_finished
         animate_circle_col(node, color, tack())
         colors[node] = color
+      else
+        animate_circle_col(node, color)
 
     return color
 
@@ -364,6 +366,11 @@ $ ->
         nbh.push(edge[0])
     return nbh
 
+  # clear the color of nodes in area
+  clear_col = ->
+    for node in nodes
+      color node, color_normal
+
   $("#bfs").click (e) ->
     e.preventDefault()
     at = 0
@@ -379,3 +386,7 @@ $ ->
     dur = 1000
     dfs(nodes)
     dur = tmp
+
+  $("#clear").click (e) ->
+    e.preventDefault()
+    clear_col()
