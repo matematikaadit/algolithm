@@ -364,14 +364,16 @@ $ ->
         nbh.push(edge[0])
     return nbh
 
-  $("#bfs").click ->
+  $("#bfs").click (e) ->
+    e.preventDefault()
     at = 0
     tmp = dur
     dur = 1000
     bfs(nodes, nodes[0])
     dur = tmp
 
-  $("#dfs").click ->
+  $("#dfs").click (e) ->
+    e.preventDefault()
     at = 0
     tmp = dur
     dur = 1000
