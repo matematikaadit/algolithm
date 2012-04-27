@@ -375,6 +375,9 @@ $ ->
   reset_area = ->
     nodes = []
     edges = []
+    t = 0
+    nw = []
+    ew = []
     node_draw()
     edge_draw()
 
